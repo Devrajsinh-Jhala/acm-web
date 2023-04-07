@@ -8,11 +8,12 @@ type Props = {};
 
 const ToggleMode = (props: Props) => {
   const [mounted, setMounted] = useState(false);
-  const { theme = "light", setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
+    setTheme("dark");
   }, []);
 
   if (!mounted) {
