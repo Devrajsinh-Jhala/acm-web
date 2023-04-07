@@ -5,14 +5,6 @@ import EventsComponent from "@/components/EventsComponent";
 
 type Props = {};
 
-/*
-TODO
-1. Cards on the Home page and their respective pages
-2. Backend Integration with Sanity and Comments functionality
-3. Event Cards and Email JS connect
-
-*/
-
 const Events = (props: Props) => {
   return (
     <>
@@ -40,16 +32,35 @@ const Events = (props: Props) => {
           </div>
         </div>
       </section>
-      <section className="my-20">
-        <section>
-          <h1 className="text-[40px] font-semibold leading-tight text-center">
+      <section className="my-20 flex flex-col gap-20">
+        <section className="flex flex-col items-center justify-center">
+          <h1 className="text-[40px] mb-5 font-semibold leading-tight text-center">
             Our Upcoming Events
           </h1>
-          <div>
-            <EventsComponent />
+
+          <div className="grid grid-cols-2 gap-10">
+            <div className="col-span-1">
+              <EventsComponent />
+            </div>
+            <div className="col-span-1">
+              <EventsComponent />
+            </div>
           </div>
         </section>
-        <h1>Past Events</h1>
+        <section className="flex flex-col items-center justify-center">
+          <h1 className="text-[40px] mb-5 font-semibold leading-tight text-center">
+            Our Past Events
+          </h1>
+
+          <div className="grid grid-cols-2 gap-10">
+            <div className="col-span-1">
+              <EventsComponent />
+            </div>
+            <div className="col-span-1">
+              <EventsComponent />
+            </div>
+          </div>
+        </section>
       </section>
     </>
   );

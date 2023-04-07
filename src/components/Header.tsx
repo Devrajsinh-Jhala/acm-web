@@ -9,7 +9,7 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <section className="flex items-center my-16 gap-16 justify-between">
+    <section className="flex items-center my-16 gap-20 justify-between">
       <div className="flex flex-col">
         <div className="text-[78px] text-secondary leading-[1] font-bold">
           <Typewriter
@@ -35,8 +35,8 @@ const Header = (props: Props) => {
         <Image
           src={illustration}
           className="object-contain"
-          width={1000}
-          height={1000}
+          width={900}
+          height={900}
           priority
           alt="Hero illustration"
         />
