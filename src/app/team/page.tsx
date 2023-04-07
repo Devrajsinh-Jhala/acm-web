@@ -57,7 +57,7 @@ const MovingImage = ({ name, img, link, designation }: MovingImageProps) => {
         alt={name}
         width={144}
         height={144}
-        className="w-36 h-36 border-4 border-white p-3 hidden absolute object-contain rounded-full"
+        className="w-36 h-36 border-4 border-dark dark:border-light p-3 hidden absolute object-contain rounded-full"
       />
     </Link>
   );

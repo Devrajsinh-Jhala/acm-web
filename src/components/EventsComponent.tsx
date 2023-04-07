@@ -7,7 +7,7 @@ type Props = {};
 
 const EventsComponent = (props: Props) => {
   return (
-    <section className="w-[400px] h-fit p-3 rounded-2xl border-4 border-white">
+    <section className="w-[400px] h-fit p-3 rounded-2xl border-4 border-dark dark:border-light">
       <Image src={image} alt="Event" className="w-auto h-auto object-contain" />
       <div className="mt-4 mb-2">
         <div className="flex text-secondary items-center justify-between">

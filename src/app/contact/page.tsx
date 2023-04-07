@@ -25,8 +25,8 @@ const ContactUs = (props: Props) => {
     });
   return (
     <div className="my-10">
-      <section className="flex items-center justify-between gap-16">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
+      <section className="flex items-center justify-between gap-24">
+        <form onSubmit={handleSubmit} className="flex w-[40%] flex-col gap-y-5">
           <div className="flex flex-col gap-1 items-start justify-start">
             <label htmlFor="name">Name</label>
             <input
@@ -37,7 +37,7 @@ const ContactUs = (props: Props) => {
               value={values.name}
               onBlur={handleBlur}
               onChange={handleChange}
-              className="px-4 py-2 w-full placeholder:text-gray-400 rounded-lg text-sm text-gray-800 focus:outline-none "
+              className="px-4 py-2 w-full border dark:border-light border-dark placeholder:text-gray-400 dark:placeholder:text-light dark:text-light text-gray-800  rounded-lg text-sm focus:outline-none "
               placeholder="Please enter your Name..."
             />
             {errors.name && touched.name && (
@@ -54,7 +54,7 @@ const ContactUs = (props: Props) => {
               value={values.email}
               onBlur={handleBlur}
               onChange={handleChange}
-              className="px-4 py-2 placeholder:text-gray-400 w-full rounded-lg text-sm text-gray-800 focus:outline-none "
+              className="px-4 py-2 border dark:border-light border-dark placeholder:text-gray-400 dark:placeholder:text-light dark:text-light text-gray-800 w-full rounded-lg text-sm focus:outline-none "
               placeholder="Please enter your Email..."
             />
 
@@ -73,8 +73,8 @@ const ContactUs = (props: Props) => {
               value={values.message}
               onBlur={handleBlur}
               onChange={handleChange}
-              className="px-4 py-2 resize-none placeholder:text-gray-400 rounded-lg text-sm text-gray-800 focus:outline-none "
-              placeholder="Please enter your Name..."
+              className="px-4 py-2 border w-full dark:border-light border-dark resize-none placeholder:text-gray-400 dark:placeholder:text-gray-50 dark:text-light text-gray-800 rounded-lg text-sm focus:outline-none "
+              placeholder="Please enter your Message..."
             />
             {errors.message && touched.message && (
               <p className="text-red-500 text-sm mt-1">{errors?.message}</p>
@@ -99,8 +99,8 @@ const ContactUs = (props: Props) => {
             src={contact}
             alt="Contact"
             className="object-contain"
-            width={800}
-            height={800}
+            width={700}
+            height={700}
           />
         </div>
       </section>

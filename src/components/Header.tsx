@@ -21,7 +21,7 @@ const Header = (props: Props) => {
             }}
           />
 
-          <p className="text-white">with us.</p>
+          <p className="text-dark dark:text-light">with us.</p>
         </div>
         <p className="mt-2 text-lg max-w-[600px]">
           Access top tech insights and knowledge through PDEU ACM&apos;s

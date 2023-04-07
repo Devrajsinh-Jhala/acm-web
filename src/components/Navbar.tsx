@@ -8,6 +8,7 @@ import ACM from "../assets/ACM.png";
 import Link from "next/link";
 import { CgProfile } from "react-icons/cg";
 import { BsFillSunFill } from "react-icons/bs";
+import ToggleMode from "./ToggleMode";
 
 type Props = {
   href: string;
@@ -17,7 +18,7 @@ const CustomLink = ({ href, title }: Props) => {
   return (
     <Link href={href} className="relative group">
       {title}
-      <span className="h-[1px] inline-block w-0 group-hover:w-full transition-[width] ease duration-300 bg-white absolute left-0 -bottom-0.5">
+      <span className="h-[1px] inline-block w-0 group-hover:w-full transition-[width] ease duration-300 bg-dark dark:bg-light absolute left-0 -bottom-0.5">
         &nbsp;
       </span>
     </Link>
@@ -66,7 +67,7 @@ const Navbar = () => {
           height={25}
           className="object-contain"
         /> */}
-        <BsFillSunFill className="object-contain h-8 w-8 cursor-pointer" />
+        <ToggleMode />
       </div>
     </nav>
   );

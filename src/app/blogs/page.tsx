@@ -3,6 +3,11 @@ import blogImage from "../../assets/blog-svgrepo-com.svg";
 import Image from "next/image";
 
 type Props = {};
+export const metadata = {
+  title: "Blogs | ACM PDEU Student Chapter",
+  description:
+    "This website is the official website for the PDEU ACM student chapter.",
+};
 
 const Blogs = (props: Props) => {
   return (

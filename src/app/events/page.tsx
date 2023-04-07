@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import eventsHeroImage from "../../assets/undraw_events_re_98ue.svg";
@@ -35,7 +36,7 @@ const Events = (props: Props) => {
       <section className="my-20 flex flex-col gap-20">
         <section className="flex flex-col items-center justify-center">
           <h1 className="text-[40px] mb-5 font-semibold leading-tight text-center">
-            Our Upcoming Events
+            Our <span className="text-secondary">Upcoming</span> Events
           </h1>
 
           <div className="grid grid-cols-2 gap-10">
@@ -49,7 +50,7 @@ const Events = (props: Props) => {
         </section>
         <section className="flex flex-col items-center justify-center">
           <h1 className="text-[40px] mb-5 font-semibold leading-tight text-center">
-            Our Past Events
+            Our <span className="text-secondary">Past</span> Events
           </h1>
 
           <div className="grid grid-cols-2 gap-10">

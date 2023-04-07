@@ -1,1 +1,1 @@
-~~1. Event Cards~~ 2. Department Cards 3. Contact Form Authentication + EmailJS 4. Adding Animations 5. Mobile Responsive 6. Light and Dark Mode 7. Authentication 8. Sanity.io backend + Comments Functionality
+~~1. Event Cards~~ 2. Department Cards 3. ~~Contact Form Authentication~~ + EmailJS 4. Adding Animations 5. Mobile Responsive 6. ~~Light and Dark Mode~~ 7. Authentication 8. Sanity.io backend + Comments Functionality
