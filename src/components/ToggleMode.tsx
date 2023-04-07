@@ -2,13 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { BsFillSunFill, BsMoonFill, BsSunFill } from "react-icons/bs";
+import { BsMoonFill, BsSunFill } from "react-icons/bs";
 
 type Props = {};
 
 const ToggleMode = (props: Props) => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme = "light", setTheme } = useTheme();
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
