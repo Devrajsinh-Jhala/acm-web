@@ -7,8 +7,10 @@ type Props = {};
 const HomeTeam = (props: Props) => {
   return (
     <section className="my-14 flex flex-col items-center justify-center">
-      <p className="text-[48px] font-bold mt-5 mb-10">Our Driving Minds</p>
-      <div className="flex items-center justify-center gap-10">
+      <p className="md:text-[48px] text-4xl font-bold mt-5 mb-10">
+        Our Driving Minds
+      </p>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         <ProfileComponent
           image={dummyImage}
           name="Utsav Mehta"

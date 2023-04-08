@@ -12,7 +12,7 @@ export const metadata = {
 const Blogs = (props: Props) => {
   return (
     <section>
-      <div className="flex items-center my-8 justify-between gap-20">
+      <div className="flex px-10 lg:px-0 lg:flex-row flex-col items-center my-8 justify-between gap-20">
         <div>
           <h1 className="text-[48px] mb-6 font-bold">Checkout our blogs</h1>
           <p className="max-w-[600px]">

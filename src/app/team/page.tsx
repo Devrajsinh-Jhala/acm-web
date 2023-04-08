@@ -83,20 +83,20 @@ const LeadMember = ({ name, designation, img, link }: LeadMemberProps) => {
 const Team = (props: Props) => {
   return (
     <>
-      <section className="my-14">
-        <section className="flex items-center justify-between gap-10">
+      <section className="my-14 overflow-x-hidden">
+        <section className="flex lg:flex-row flex-col lg:items-center items-start px-10 lg:px-0 justify-between gap-10">
           <div>
-            <p className="text-[40px] leading-tight max-w-[450px] font-bold">
+            <p className="text-[40px] leading-tight w-full lg:max-w-[450px] font-bold">
               Bringing technological awareness and empowering university geeks.
             </p>
-            <p className="my-3 max-w-[450px]">
+            <p className="my-3 w-full lg:max-w-[450px]">
               Concentrating the ACM&apos;s motivation to build an ecosystem for
               the future of tech. With this mission, we are conducting seminars,
               building systems and bridging the gap between academia and
               industry.
             </p>
           </div>
-          <div>
+          <div className="flex items-center justify-center align-middle text-center">
             <Image
               src={team}
               className=""
@@ -108,11 +108,11 @@ const Team = (props: Props) => {
         </section>
 
         {/* Meet the minds that make it happen */}
-        <section className=" my-28 flex flex-col items-center font-bold">
-          <h1 className="max-w-[500px] text-[40px] leading-tight text-center">
+        <section className=" my-28 px-10 lg:px-0 flex flex-col items-center font-bold">
+          <h1 className="max-w-[500px] text-3xl md:text-[40px] leading-tight text-center">
             Meet the minds that make it happen
           </h1>
-          <div className="flex items-center gap-10 justify-center my-10">
+          <div className="flex md:flex-row flex-col items-center gap-10 justify-center my-10">
             <ProfileComponent
               image=""
               name="Dr. Shakti Mishra"
@@ -127,12 +127,12 @@ const Team = (props: Props) => {
         </section>
 
         {/* Meet the leads that make it happen */}
-        <section className="-mt-5 flex flex-col items-center font-bold">
-          <h1 className="max-w-[450px] text-[40px] mb-10 leading-tight text-center">
+        <section className="-mt-5 flex px-10 lg:px-0 overflow-x-hidden flex-col items-center font-bold">
+          <h1 className="max-w-[450px] text-3xl md:text-[40px] mb-10 leading-tight text-center">
             Meet the leads that make it happen
           </h1>
         </section>
-        <div className="my-5 gap-5 flex items-center">
+        <div className="my-5 gap-5 px-10 lg:px-0 flex items-center">
           <div className="bg-secondary h-[2px] w-[3%] text-secondary" />
           <h1 className=" max-w-[150px] text-xl -mr-10 w-full font-semibold">
             The Leads
@@ -141,8 +141,8 @@ const Team = (props: Props) => {
           <div className="bg-secondary h-[2px] w-full text-secondary" />
         </div>
 
-        <section className="flex gap-20">
-          <section className="flex items-start my-5 gap-10">
+        <section className="flex lg:flex-row flex-col px-10 lg:px-0 lg:gap-20">
+          <section className="flex lg:flex-row flex-col items-start my-5 gap-10">
             {/* First Column */}
             <div className="flex flex-col gap-10 ">
               <LeadMember
@@ -171,10 +171,10 @@ const Team = (props: Props) => {
               </div>
             </div>
             {/* First Line */}
-            <div className="bg-secondary text-secondary h-[500px] w-[2px] " />
+            <div className="bg-secondary text-secondary lg:h-[500px] h-[2px] lg:w-[2px] w-full " />
           </section>
 
-          <section className="flex items-start my-5 gap-16">
+          <section className="flex lg:flex-row flex-col items-start my-5 gap-16">
             {/* First Column */}
             <div className="flex flex-col gap-10 ">
               <div>
@@ -199,7 +199,7 @@ const Team = (props: Props) => {
               </div>
             </div>
             {/* First Line */}
-            <div className="bg-secondary text-secondary h-[500px] w-[2px] " />
+            <div className="bg-secondary text-secondary lg:h-[500px] h-[2px] lg:w-[2px] w-full " />
           </section>
           <section className="flex items-start my-5 gap-5">
             {/* First Column */}

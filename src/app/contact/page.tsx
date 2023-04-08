@@ -24,9 +24,12 @@ const ContactUs = (props: Props) => {
       },
     });
   return (
-    <div className="my-10">
-      <section className="flex items-center justify-between gap-24">
-        <form onSubmit={handleSubmit} className="flex w-[40%] flex-col gap-y-5">
+    <div className="my-10 px-10 lg:px-0">
+      <section className="flex md:flex-row flex-col items-start md:items-center justify-between gap-24">
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full lg:w-[40%] flex-col gap-y-5"
+        >
           <div className="flex flex-col gap-1 items-start justify-start">
             <label htmlFor="name">Name</label>
             <input

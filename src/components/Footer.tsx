@@ -7,7 +7,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="flex items-center my-10 justify-between">
+    <footer className="flex lg:flex-row flex-col  px-10 lg:px-0 items-center my-10 space-y-5 justify-between">
       <div>
         <p className=" capitalize font-bold">EMAIL</p>
         <a className="text-lg font-bold" href="mailto:acm.for.pdeu@gmail.com">
@@ -27,7 +27,7 @@ const Footer = (props: Props) => {
       </div>
       <div className="">
         <p className="text-base">Follow us on:</p>
-        <div className="mt-2 flex items-center justify-end gap-5">
+        <div className="mt-2 flex items-center justify-center lg:justify-end gap-5">
           <BsInstagram className="text-2xl hover:scale-110 transition-all duration-300 cursor-pointer" />
           <BsLinkedin className="text-2xl hover:scale-110 transition-all duration-300 cursor-pointer" />
         </div>
