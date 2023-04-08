@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import server from "../assets/free-svg-illustration-hosting.svg";
 import rocket from "../assets/free-svg-illustration-rocket.svg";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -10,16 +12,25 @@ const HomeContainer = (props: Props) => {
   return (
     <section className="my-28 flex flex-col items-center justify-center gap-y-24">
       <section className="flex flex-col px-10 lg:px-0 md:flex-row gap-10 items-center justify-between">
-        <div className="flex flex-col gap-y-5">
+        <motion.div
+          initial={{ x: -700 }}
+          animate={{ x: 0 }}
+          whileInView={{ animation: "ease-in-out" }}
+          className="flex flex-col gap-y-5"
+        >
           <p className="md:text-[26px] text-xl">
             Computing is not about{" "}
             <span className="text-secondary">computers</span>; it is about
             living and using computer science to tackle societal challenges.
           </p>
           <Button buttonText="Learn more about ACM" />
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.2 }}
+        >
           <Image
             src={server}
             alt="Hosting"
@@ -27,10 +38,14 @@ const HomeContainer = (props: Props) => {
             height={1700}
             className="object-contain"
           />
-        </div>
+        </motion.div>
       </section>
       <section className="flex flex-col px-10 lg:px-0 md:flex-row gap-10 items-center justify-between">
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ animation: "ease-in-out" }}
+          animate={{ opacity: 1, transition: { duration: 0.5 } }}
+        >
           <Image
             src={rocket}
             alt="Rocket Illustration"
@@ -38,8 +53,13 @@ const HomeContainer = (props: Props) => {
             height={900}
             className="object-contain "
           />
-        </div>
-        <div className="flex flex-col gap-y-5">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.2 }}
+          className="flex flex-col gap-y-5"
+        >
           <p className="md:text-[26px] text-xl">
             Participating in events is a great way to expand your network, learn
             new skills, and gain valuable experience. Don&apos;t miss out on the
@@ -47,7 +67,7 @@ const HomeContainer = (props: Props) => {
             personal and professional growth.
           </p>
           <Button buttonText="Learn more about ACM Events" />
-        </div>
+        </motion.div>
       </section>
     </section>
   );

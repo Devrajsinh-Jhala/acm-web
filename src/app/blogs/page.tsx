@@ -1,19 +1,20 @@
+"use client";
 import React from "react";
 import blogImage from "../../assets/blog-svgrepo-com.svg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Props = {};
-export const metadata = {
-  title: "Blogs | ACM PDEU Student Chapter",
-  description:
-    "This website is the official website for the PDEU ACM student chapter.",
-};
 
 const Blogs = (props: Props) => {
   return (
     <section>
       <div className="flex px-10 lg:px-0 lg:flex-row flex-col items-center my-8 justify-between gap-20">
-        <div>
+        <motion.div
+          initial={{ x: -700 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "easeInOut", duration: 0.5 }}
+        >
           <h1 className="text-[48px] mb-6 font-bold">Checkout our blogs</h1>
           <p className="max-w-[600px]">
             Blogs serve as a platform for sharing knowledge and expertise, and
@@ -25,8 +26,12 @@ const Blogs = (props: Props) => {
             We pubish blogs on many topics ranging from DSA to Development, You
             can filter your choice below and read as you please.
           </p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.2 }}
+        >
           <Image
             src={blogImage}
             width={500}
@@ -34,7 +39,7 @@ const Blogs = (props: Props) => {
             className="object-contain"
             alt="Hero Blog"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

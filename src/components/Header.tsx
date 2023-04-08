@@ -5,12 +5,18 @@ import illustration from "../assets/computer_illustration_1.png";
 import Image from "next/image";
 
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <section className="flex lg:flex-row flex-col px-10 lg:px-0 items-start lg:items-center my-16 lg:gap-20 gap-y-20 lg:justify-between">
-      <div className="flex flex-col">
+    <section className="flex lg:flex-row flex-col px-10 lg:px-0 items-start lg:items-center my-20 lg:gap-20 gap-y-20 lg:justify-between">
+      <motion.div
+        initial={{ x: -700 }}
+        animate={{ x: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+        className="flex flex-col"
+      >
         <div className="md:text-[78px] text-[60px] text-secondary leading-[1] font-bold">
           <Typewriter
             options={{
@@ -30,8 +36,12 @@ const Header = (props: Props) => {
         <div className="mt-5">
           <Button buttonText="Checkout our Team" />
         </div>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeInOut", duration: 0.3 }}
+      >
         <Image
           src={illustration}
           className="object-contain px-10 lg:px-0"
@@ -40,7 +50,7 @@ const Header = (props: Props) => {
           priority
           alt="Hero illustration"
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

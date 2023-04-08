@@ -32,7 +32,18 @@ const MovingImage = ({ name, img, link, designation }: MovingImageProps) => {
 
   function handleMouseMove(event: any) {
     imageRef.current.style.display = "inline";
-    x.set(event.pageX);
+    if (event.pageX >= 300) {
+      x.set(event.pageX / 2);
+    }
+    if (event.pageX >= 600) {
+      x.set(event.pageX);
+    }
+    if (event.pageX >= 900) {
+      x.set(event.pageX / 5.5);
+    } else {
+      x.set(event.pageX);
+    }
+
     y.set(-50);
   }
   function handleMouseLeave(event: any) {
@@ -46,8 +57,22 @@ const MovingImage = ({ name, img, link, designation }: MovingImageProps) => {
       onMouseLeave={handleMouseLeave}
       href={link}
     >
-      <p className="text-[28px] font-bold">{name}</p>
-      <p className="text-base mt-1">{designation}</p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ ease: "easeInOut", duration: 0.2 }}
+        className="text-[28px] font-bold"
+      >
+        {name}
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ ease: "easeInOut", duration: 0.2 }}
+        className="text-base mt-1"
+      >
+        {designation}
+      </motion.p>
       <FramerImage
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
@@ -66,8 +91,11 @@ const MovingImage = ({ name, img, link, designation }: MovingImageProps) => {
 const LeadMember = ({ name, designation, img, link }: LeadMemberProps) => {
   return (
     <motion.div
-      initial={{ y: 200 }}
-      whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: { duration: 0.5, ease: "easeInOut" },
+      }}
       viewport={{ once: true }}
     >
       <MovingImage
@@ -85,7 +113,11 @@ const Team = (props: Props) => {
     <>
       <section className="my-14 overflow-x-hidden">
         <section className="flex lg:flex-row flex-col lg:items-center items-start px-10 lg:px-0 justify-between gap-10">
-          <div>
+          <motion.div
+            initial={{ x: -700 }}
+            animate={{ x: 0 }}
+            transition={{ ease: "easeInOut", duration: 0.5 }}
+          >
             <p className="text-[40px] leading-tight w-full lg:max-w-[450px] font-bold">
               Bringing technological awareness and empowering university geeks.
             </p>
@@ -95,8 +127,13 @@ const Team = (props: Props) => {
               building systems and bridging the gap between academia and
               industry.
             </p>
-          </div>
-          <div className="flex items-center justify-center align-middle text-center">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.3 }}
+            className="flex items-center justify-center align-middle text-center"
+          >
             <Image
               src={team}
               className=""
@@ -104,7 +141,7 @@ const Team = (props: Props) => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
         </section>
 
         {/* Meet the minds that make it happen */}
@@ -112,7 +149,15 @@ const Team = (props: Props) => {
           <h1 className="max-w-[500px] text-3xl md:text-[40px] leading-tight text-center">
             Meet the minds that make it happen
           </h1>
-          <div className="flex md:flex-row flex-col items-center gap-10 justify-center my-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              animation: "ease-in-out",
+              transition: { duration: 1 },
+            }}
+            className="flex md:flex-row flex-col items-center gap-10 justify-center my-10"
+          >
             <ProfileComponent
               image=""
               name="Dr. Shakti Mishra"
@@ -123,7 +168,7 @@ const Team = (props: Props) => {
               name="Dr. Debabrata Swain"
               designation="Faculty Sponsor"
             />
-          </div>
+          </motion.div>
         </section>
 
         {/* Meet the leads that make it happen */}
@@ -157,18 +202,24 @@ const Team = (props: Props) => {
                 link={"/"}
                 designation="Treasurer"
               />
-              <div>
-                <p className="text-[28px] font-bold">Vivek Sakariya</p>
-                <p className="text-base mt-1">Mobile Application</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Priyanshu Malaviya</p>
-                <p className="text-base mt-1">AI & ML</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Neh Patel</p>
-                <p className="text-base mt-1">Cyber Security</p>
-              </div>
+              <LeadMember
+                img={dummyImage}
+                name="Vivek Sakariya"
+                link={"/"}
+                designation="Mobile Application"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Priyanshu Malaviya"
+                link={"/"}
+                designation="AI and ML"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Vaishvi Shah"
+                link={"/"}
+                designation="Documentation Head"
+              />
             </div>
             {/* First Line */}
             <div className="bg-secondary text-secondary lg:h-[500px] h-[2px] lg:w-[2px] w-full " />
@@ -177,26 +228,36 @@ const Team = (props: Props) => {
           <section className="flex lg:flex-row flex-col items-start my-5 gap-16">
             {/* First Column */}
             <div className="flex flex-col gap-10 ">
-              <div>
-                <p className="text-[28px] font-bold">Hardeep Patel</p>
-                <p className="text-base mt-1">Vice Chairperson</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Kevin Patel</p>
-                <p className="text-base mt-1">Membership Chair</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Rohit Agarwal</p>
-                <p className="text-base mt-1">Competitive Programming</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Manav Ukani</p>
-                <p className="text-base mt-1">Publicity Head</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Vaishvi Shah</p>
-                <p className="text-base mt-1">Documentation Head</p>
-              </div>
+              <LeadMember
+                img={dummyImage}
+                name="Hardeep Patel"
+                link={"/"}
+                designation="Vice - Chairperson"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Kevin Patel"
+                link={"/"}
+                designation="Membership Chair"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Rohit Agarwal"
+                link={"/"}
+                designation="Competitive Programming"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Manav Ukani"
+                link={"/"}
+                designation="Publicity Head"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Cyber Security"
+                link={"/"}
+                designation="Cyber Security"
+              />
             </div>
             {/* First Line */}
             <div className="bg-secondary text-secondary lg:h-[500px] h-[2px] lg:w-[2px] w-full " />
@@ -204,26 +265,36 @@ const Team = (props: Props) => {
           <section className="flex items-start my-5 gap-5">
             {/* First Column */}
             <div className="flex flex-col gap-10 ">
-              <div>
-                <p className="text-[28px] font-bold">Ayush Bhatt</p>
-                <p className="text-base mt-1">Secretary</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Monarch Mistry</p>
-                <p className="text-base mt-1">Logistics Head</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Chaintanya Sheth</p>
-                <p className="text-base mt-1">Event Management</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Yash Jobanputra</p>
-                <p className="text-base mt-1">Public Relations</p>
-              </div>
-              <div>
-                <p className="text-[28px] font-bold">Kahaan Patel</p>
-                <p className="text-base mt-1">Graphics and Designing</p>
-              </div>
+              <LeadMember
+                img={dummyImage}
+                name="Ayush Bhatt"
+                link={"/"}
+                designation="Secretary"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Monarch Mistry"
+                link={"/"}
+                designation="Logistics Head"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Chaitanya Sheth"
+                link={"/"}
+                designation="Event Management"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Yash Jobanputra"
+                link={"/"}
+                designation="Public Relations"
+              />
+              <LeadMember
+                img={dummyImage}
+                name="Kahaan Patel"
+                link={"/"}
+                designation="Graphics and Designing"
+              />
             </div>
           </section>
         </section>

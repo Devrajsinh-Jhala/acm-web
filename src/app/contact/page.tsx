@@ -4,6 +4,7 @@ import React from "react";
 import contact from "../../assets/undraw_contact_us_re_4qqt.svg";
 import { useFormik } from "formik";
 import { contactFormSchema } from "@/schemas";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -26,7 +27,10 @@ const ContactUs = (props: Props) => {
   return (
     <div className="my-10 px-10 lg:px-0">
       <section className="flex md:flex-row flex-col items-start md:items-center justify-between gap-24">
-        <form
+        <motion.form
+          initial={{ x: -700 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "easeInOut", duration: 0.5 }}
           onSubmit={handleSubmit}
           className="flex w-full lg:w-[40%] flex-col gap-y-5"
         >
@@ -96,8 +100,12 @@ const ContactUs = (props: Props) => {
                 : "cursor-pointer opacity-100"
             }`}
           />
-        </form>
-        <div>
+        </motion.form>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.2 }}
+        >
           <Image
             src={contact}
             alt="Contact"
@@ -105,7 +113,7 @@ const ContactUs = (props: Props) => {
             width={700}
             height={700}
           />
-        </div>
+        </motion.div>
       </section>
     </div>
   );
