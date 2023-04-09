@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import contact from "../../assets/undraw_contact_us_re_4qqt.svg";
 import { useFormik } from "formik";
-import { contactFormSchema } from "@/schemas";
+import { contactFormSchema } from "../../schemas";
 import { motion } from "framer-motion";
 
 type Props = {};
