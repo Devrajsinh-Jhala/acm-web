@@ -57,8 +57,8 @@ _updatedAt
 
   return (
     <>
-      <article className="px-10 max-w-[1000px] mx-auto w-full pb-28">
-        <section className="space-y-2 border border-[#f7ab0a] text-white">
+      <article className="px-10 max-w-[1000px] mt-10 mx-auto w-full pb-28">
+        <section className="space-y-2 border border-secondary rounded-lg text-white">
           <div className="relative z-[-10] min-h-56 flex flex-col md:flex-row justify-between">
             <div className="absolute z-[-10] top-0 w-full h-full opacity-10 blur-sm p-10">
               <Image
@@ -68,7 +68,7 @@ _updatedAt
                 fill
               />
             </div>
-            <section className="p-5 bg-[#f7ab0a] w-full">
+            <section className="p-5  bg-secondary w-full">
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div className="space-y-2">
                   <h1 className="text-4xl font-bold">{post.title}</h1>
@@ -122,7 +122,7 @@ _updatedAt
           <PortableText value={post.body} components={RichTextComponents} />
         </article>
 
-        <hr className="border-[#f7ab0a] border" />
+        <hr className="border-secondary border" />
         {/* <div className="my-5">
           <FormComponent post={post} />
         </div> */}

@@ -33,7 +33,7 @@ const PostsComponent = ({ posts }: Props) => {
   const { currentPage, entriesPerPage, entries } = usePagination(1, 4);
   return (
     <section className="">
-      <hr className="border-[#f7ab0a] mb-10" />
+      <hr className="border-secondary mb-10" />
       <form className="flex md:flex-row flex-col items-center md:gap-10 gap-3 justify-between px-10 w-full ">
         <label className="mb-5 block w-full">
           <input
@@ -75,7 +75,7 @@ const PostsComponent = ({ posts }: Props) => {
               key={post._id}
               route={`/post/${post.slug.current}`}
             >
-              <div className="flex flex-col cursor-pointer group">
+              <div className="flex flex-col border border-secondary p-2 rounded-lg cursor-pointer group">
                 <div className="relative w-full z-[-10] h-52 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                   <Image
                     className="object-cover   lg:object-center"
@@ -100,7 +100,7 @@ const PostsComponent = ({ posts }: Props) => {
                       {post.categories.map((category, i) => (
                         <div
                           key={i}
-                          className="bg-[#f7ab0a] text-xs text-center text-black px-3 py-1 rounded-full font-semibold"
+                          className="bg-secondary text-xs text-center text-white px-3 py-1 rounded-full font-semibold"
                         >
                           <p>{category.title}</p>
                         </div>
