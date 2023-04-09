@@ -82,7 +82,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center gap-6">
-          <CgProfile className="object-contain h-8 w-8 cursor-pointer" />
+          {/* <CgProfile className="object-contain h-8 w-8 cursor-pointer" /> */}
 
           <ToggleMode />
         </div>
@@ -129,12 +129,12 @@ const Navbar = () => {
                 </ul>
               </div>
               <div className="flex items-center my-4 gap-6">
-                <CgProfile
+                {/* <CgProfile
                   onClick={() => {
                     setIsNavbarOpen(!isNavbarOpen);
                   }}
                   className="object-contain h-8 w-8 cursor-pointer"
-                />
+                /> */}
 
                 <ToggleMode />
               </div>

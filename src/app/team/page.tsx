@@ -222,7 +222,7 @@ const Team = (props: Props) => {
               />
             </div>
             {/* First Line */}
-            <div className="bg-secondary text-secondary lg:h-[500px] h-[2px] lg:w-[2px] w-full " />
+            <div className="bg-secondary text-secondary lg:h-[610px] h-[2px] lg:w-[2px] w-full " />
           </section>
 
           <section className="flex lg:flex-row flex-col items-start my-5 gap-16">
@@ -254,13 +254,19 @@ const Team = (props: Props) => {
               />
               <LeadMember
                 img={dummyImage}
-                name="Cyber Security"
+                name="Neh Patel"
                 link={"/"}
                 designation="Cyber Security"
               />
+              <LeadMember
+                img={dummyImage}
+                name="Ahmed Mulla"
+                link={"/"}
+                designation="Techinical Lead"
+              />
             </div>
             {/* First Line */}
-            <div className="bg-secondary text-secondary lg:h-[500px] h-[2px] lg:w-[2px] w-full " />
+            <div className="bg-secondary text-secondary lg:h-[610px] h-[2px] lg:w-[2px] w-full " />
           </section>
           <section className="flex items-start my-5 gap-5">
             {/* First Column */}
