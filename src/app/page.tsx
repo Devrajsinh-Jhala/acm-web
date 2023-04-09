@@ -8,6 +8,7 @@ Home Page, Team Page, Events Page, Blogs Page, Contact Page, Web Team Page, App 
 import HomeContainer from "@/containers/HomeContainer";
 import Header from "../components/Header";
 import HomeTeam from "@/containers/HomeTeam";
+import DepartmentContainers from "@/containers/DepartmentContainers";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <HomeTeam />
       <HomeContainer />
+      <DepartmentContainers />
     </main>
   );
 }

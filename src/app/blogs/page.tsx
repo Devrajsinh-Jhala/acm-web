@@ -13,7 +13,7 @@ const Blogs = (props: Props) => {
         <motion.div
           initial={{ x: -700 }}
           animate={{ x: 0 }}
-          transition={{ ease: "easeInOut", duration: 0.5 }}
+          transition={{ duration: 0.5 }}
         >
           <h1 className="text-[48px] mb-6 font-bold">Checkout our blogs</h1>
           <p className="max-w-[600px]">
@@ -30,7 +30,7 @@ const Blogs = (props: Props) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 0.2 }}
+          transition={{ duration: 0.2 }}
         >
           <Image
             src={blogImage}

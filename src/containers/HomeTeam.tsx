@@ -20,7 +20,7 @@ const HomeTeam = (props: Props) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ ease: "easeInOut", duration: 0.2 }}
+        transition={{ duration: 0.2 }}
         className="flex flex-col md:flex-row items-center justify-center gap-10"
       >
         <ProfileComponent

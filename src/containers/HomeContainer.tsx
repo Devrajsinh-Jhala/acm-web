@@ -15,7 +15,6 @@ const HomeContainer = (props: Props) => {
         <motion.div
           initial={{ x: -700 }}
           animate={{ x: 0 }}
-          whileInView={{ animation: "ease-in-out" }}
           className="flex flex-col gap-y-5"
         >
           <p className="md:text-[26px] text-xl">
@@ -29,7 +28,7 @@ const HomeContainer = (props: Props) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 0.2 }}
+          transition={{ duration: 0.2 }}
         >
           <Image
             src={server}
@@ -43,7 +42,6 @@ const HomeContainer = (props: Props) => {
       <section className="flex flex-col px-10 lg:px-0 md:flex-row gap-10 items-center justify-between">
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ animation: "ease-in-out" }}
           animate={{ opacity: 1, transition: { duration: 0.5 } }}
         >
           <Image
@@ -57,7 +55,7 @@ const HomeContainer = (props: Props) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 0.2 }}
+          transition={{ duration: 0.2 }}
           className="flex flex-col gap-y-5"
         >
           <p className="md:text-[26px] text-xl">

@@ -68,6 +68,7 @@ const Navbar = () => {
               className="h-20 w-20 object-contain"
               width={40}
               height={40}
+              priority
             />
           </Link>
           <ul className="flex items-center gap-10">

@@ -15,7 +15,7 @@ const Events = (props: Props) => {
           <motion.div
             initial={{ x: -700 }}
             animate={{ x: 0 }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
+            transition={{ duration: 0.5 }}
           >
             <h1 className="text-[48px] leading-tight mb-6 font-bold">
               We conduct <span className="text-secondary">Events</span>{" "}
@@ -30,7 +30,7 @@ const Events = (props: Props) => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.2 }}
+            transition={{ duration: 0.2 }}
           >
             <Image
               src={eventsHeroImage}
@@ -51,7 +51,7 @@ const Events = (props: Props) => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.2 }}
+            transition={{ duration: 0.2 }}
             className="grid md:grid-cols-2 grid-cols-1 gap-10"
           >
             <div className="col-span-1">
@@ -70,7 +70,7 @@ const Events = (props: Props) => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.2 }}
+            transition={{ duration: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 gap-10"
           >
             <div className="col-span-1">

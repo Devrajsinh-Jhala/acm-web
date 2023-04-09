@@ -36,7 +36,7 @@ const MovingImage = ({ name, img, link, designation }: MovingImageProps) => {
       x.set(event.pageX / 2);
     }
     if (event.pageX >= 600) {
-      x.set(event.pageX);
+      x.set(event.pageX / 3);
     }
     if (event.pageX >= 900) {
       x.set(event.pageX / 5.5);

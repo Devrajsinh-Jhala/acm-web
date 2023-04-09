@@ -30,7 +30,7 @@ const ContactUs = (props: Props) => {
         <motion.form
           initial={{ x: -700 }}
           animate={{ x: 0 }}
-          transition={{ ease: "easeInOut", duration: 0.5 }}
+          transition={{ duration: 0.5 }}
           onSubmit={handleSubmit}
           className="flex w-full lg:w-[40%] flex-col gap-y-5"
         >
@@ -104,7 +104,7 @@ const ContactUs = (props: Props) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 0.2 }}
+          transition={{ duration: 0.2 }}
         >
           <Image
             src={contact}
