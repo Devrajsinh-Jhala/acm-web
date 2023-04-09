@@ -6,6 +6,26 @@ import ProfileComponent from "@/components/ProfileComponent";
 import { motion, useMotionValue } from "framer-motion";
 import dummyImage from "../../assets/pc_guy.png";
 import Link from "next/link";
+import ShaktiMamImage from "../../assets/faculties/Shakti Mam.jpeg";
+import DebabrataSirImage from "../../assets/faculties/Debabrata Sir.jpeg";
+
+// Lead Members
+import UtsavImage from "../../assets/leads/Utsav.jpeg";
+import HardeepImage from "../../assets/leads/Hardeep.png";
+import AyushImage from "../../assets/leads/Ayush.jpeg";
+import DevanshuImage from "../../assets/leads/Devanshu.png";
+import KevinImage from "../../assets/leads/Kevin.png";
+import MonarchImage from "../../assets/leads/Monarch.png";
+import VivekImage from "../../assets/leads/Vivek.png";
+import RohitImage from "../../assets/leads/Rohit.png";
+import ChaitanyaImage from "../../assets/leads/Chaitanya.png";
+import PriyanshuImage from "../../assets/leads/Priyanshu.png";
+import ManavImage from "../../assets/leads/Manav.png";
+import YashImage from "../../assets/leads/Yash.png";
+import VaishviImage from "../../assets/leads/Vaishvi.png";
+import NehImage from "../../assets/leads/Neh.png";
+import KahaanImage from "../../assets/leads/Kahaan.png";
+import AhmedImage from "../../assets/leads/Ahmed.png";
 
 type Props = {};
 type LeadMemberProps = {
@@ -82,7 +102,7 @@ const MovingImage = ({ name, img, link, designation }: MovingImageProps) => {
         alt={name}
         width={144}
         height={144}
-        className="w-36 h-36 border-4 border-dark dark:border-light p-3 hidden absolute object-contain rounded-full"
+        className="w-[200px] h-[200px]  hidden absolute  rounded-full"
       />
     </Link>
   );
@@ -159,14 +179,16 @@ const Team = (props: Props) => {
             className="flex md:flex-row flex-col items-center gap-10 justify-center my-10"
           >
             <ProfileComponent
-              image=""
+              image={ShaktiMamImage}
               name="Dr. Shakti Mishra"
               designation="H.O.D - Department of CSE"
+              linkedInUrl="https://www.linkedin.com/in/shakti-mishra-20b64947/"
             />
             <ProfileComponent
-              image=""
+              image={DebabrataSirImage}
               name="Dr. Debabrata Swain"
               designation="Faculty Sponsor"
+              linkedInUrl="https://www.linkedin.com/in/dr-debabrata-swain-44980636/"
             />
           </motion.div>
         </section>
@@ -191,31 +213,31 @@ const Team = (props: Props) => {
             {/* First Column */}
             <div className="flex flex-col gap-10 ">
               <LeadMember
-                img={dummyImage}
+                img={UtsavImage}
                 name="Utsav Mehta"
                 designation="Chairperson"
                 link={"/"}
               />
               <LeadMember
-                img={dummyImage}
+                img={DevanshuImage}
                 name="Devanshu Mehta"
                 link={"/"}
                 designation="Treasurer"
               />
               <LeadMember
-                img={dummyImage}
+                img={VivekImage}
                 name="Vivek Sakariya"
                 link={"/"}
                 designation="Mobile Application"
               />
               <LeadMember
-                img={dummyImage}
+                img={PriyanshuImage}
                 name="Priyanshu Malaviya"
                 link={"/"}
                 designation="AI and ML"
               />
               <LeadMember
-                img={dummyImage}
+                img={VaishviImage}
                 name="Vaishvi Shah"
                 link={"/"}
                 designation="Documentation Head"
@@ -229,37 +251,37 @@ const Team = (props: Props) => {
             {/* First Column */}
             <div className="flex flex-col gap-10 ">
               <LeadMember
-                img={dummyImage}
+                img={HardeepImage}
                 name="Hardeep Patel"
                 link={"/"}
                 designation="Vice - Chairperson"
               />
               <LeadMember
-                img={dummyImage}
+                img={KevinImage}
                 name="Kevin Patel"
                 link={"/"}
                 designation="Membership Chair"
               />
               <LeadMember
-                img={dummyImage}
+                img={RohitImage}
                 name="Rohit Agarwal"
                 link={"/"}
                 designation="Competitive Programming"
               />
               <LeadMember
-                img={dummyImage}
+                img={ManavImage}
                 name="Manav Ukani"
                 link={"/"}
                 designation="Publicity Head"
               />
               <LeadMember
-                img={dummyImage}
+                img={NehImage}
                 name="Neh Patel"
                 link={"/"}
                 designation="Cyber Security"
               />
               <LeadMember
-                img={dummyImage}
+                img={AhmedImage}
                 name="Ahmed Mulla"
                 link={"/"}
                 designation="Techinical Lead"
@@ -272,31 +294,31 @@ const Team = (props: Props) => {
             {/* First Column */}
             <div className="flex flex-col gap-10 ">
               <LeadMember
-                img={dummyImage}
+                img={AyushImage}
                 name="Ayush Bhatt"
                 link={"/"}
                 designation="Secretary"
               />
               <LeadMember
-                img={dummyImage}
+                img={MonarchImage}
                 name="Monarch Mistry"
                 link={"/"}
                 designation="Logistics Head"
               />
               <LeadMember
-                img={dummyImage}
+                img={ChaitanyaImage}
                 name="Chaitanya Sheth"
                 link={"/"}
                 designation="Event Management"
               />
               <LeadMember
-                img={dummyImage}
+                img={YashImage}
                 name="Yash Jobanputra"
                 link={"/"}
                 designation="Public Relations"
               />
               <LeadMember
-                img={dummyImage}
+                img={KahaanImage}
                 name="Kahaan Patel"
                 link={"/"}
                 designation="Graphics and Designing"

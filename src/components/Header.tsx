@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import Link from "next/link";
 type Props = {};
 
 const Header = (props: Props) => {
@@ -34,7 +35,9 @@ const Header = (props: Props) => {
           community-powered ecosystem.
         </p>
         <div className="mt-5">
-          <Button buttonText="Checkout our Team" />
+          <Link href={"/team"}>
+            <Button buttonText="Checkout our Team" />
+          </Link>
         </div>
       </motion.div>
       <motion.div

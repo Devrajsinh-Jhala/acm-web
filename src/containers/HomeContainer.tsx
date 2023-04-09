@@ -5,6 +5,7 @@ import rocket from "../assets/free-svg-illustration-rocket.svg";
 import Image from "next/image";
 import Button from "@/components/Button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {};
 
@@ -17,12 +18,18 @@ const HomeContainer = (props: Props) => {
           animate={{ x: 0 }}
           className="flex flex-col gap-y-5"
         >
-          <p className="md:text-[26px] text-xl">
+          <p className="md:text-[26px] leading-normal text-xl">
             Computing is not about{" "}
             <span className="text-secondary">computers</span>; it is about
             living and using computer science to tackle societal challenges.
           </p>
-          <Button buttonText="Learn more about ACM" />
+          <a
+            href="https://www.acm.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button buttonText="Learn more about ACM" />
+          </a>
         </motion.div>
 
         <motion.div
@@ -58,13 +65,15 @@ const HomeContainer = (props: Props) => {
           transition={{ duration: 0.2 }}
           className="flex flex-col gap-y-5"
         >
-          <p className="md:text-[26px] text-xl">
+          <p className="md:text-[26px] leading-normal text-xl">
             Participating in events is a great way to expand your network, learn
             new skills, and gain valuable experience. Don&apos;t miss out on the
             opportunity to connect with like-minded individuals and enhance your
             personal and professional growth.
           </p>
-          <Button buttonText="Learn more about ACM Events" />
+          <Link href={"/events"}>
+            <Button buttonText="Learn more about ACM Events" />
+          </Link>
         </motion.div>
       </section>
     </section>

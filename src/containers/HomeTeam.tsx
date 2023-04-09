@@ -3,6 +3,9 @@ import ProfileComponent from "@/components/ProfileComponent";
 import React from "react";
 import dummyImage from "../assets/pc_guy.png";
 import { motion } from "framer-motion";
+import Hardeep from "../assets/leads/Hardeep.png";
+import Utsav from "../assets/leads/Utsav.jpeg";
+import Ayush from "../assets/leads/Ayush.jpeg";
 
 type Props = {};
 
@@ -13,7 +16,7 @@ const HomeTeam = (props: Props) => {
         initial={{ x: -1000 }}
         animate={{ x: 0 }}
         transition={{ ease: "easeInOut", duration: 0.5 }}
-        className="md:text-[48px] text-4xl font-bold mt-5 mb-10"
+        className="md:text-[48px] text-center text-4xl font-bold mt-5 mb-10"
       >
         Our Driving Minds
       </motion.p>
@@ -24,19 +27,22 @@ const HomeTeam = (props: Props) => {
         className="flex flex-col md:flex-row items-center justify-center gap-10"
       >
         <ProfileComponent
-          image={dummyImage}
+          image={Utsav}
           name="Utsav Mehta"
           designation="Chairperson"
+          linkedInUrl="https://www.linkedin.com/in/mehtautsav/"
         />
         <ProfileComponent
-          image={dummyImage}
+          image={Hardeep}
           name="Hardeep Patel"
           designation="Vice-Chairperson"
+          linkedInUrl="https://www.linkedin.com/in/hardeep-patel/"
         />
         <ProfileComponent
-          image={dummyImage}
+          image={Ayush}
           name="Ayush Bhatt"
           designation="Secretary"
+          linkedInUrl="https://www.linkedin.com/in/bhatt-ayush/"
         />
       </motion.div>
     </section>
