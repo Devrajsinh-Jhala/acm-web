@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import React, { ReactEventHandler, useRef } from "react";
+import React, { useRef } from "react";
 import team from "../../assets/undraw_team_collaboration_re_ow29.svg";
 import ProfileComponent from "@/components/ProfileComponent";
 import { motion, useMotionValue } from "framer-motion";
-import dummyImage from "../../assets/pc_guy.png";
 import Link from "next/link";
 import ShaktiMamImage from "../../assets/faculties/Shakti Mam.jpeg";
 import DebabrataSirImage from "../../assets/faculties/Debabrata Sir.jpeg";
@@ -357,7 +356,7 @@ const Team = (props: Props) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col mt-10  md:flex-row items-center justify-center gap-10"
+            className="flex flex-col w-full mt-10  md:flex-row items-center justify-center gap-10"
           >
             <ProfileComponent
               image={""}
