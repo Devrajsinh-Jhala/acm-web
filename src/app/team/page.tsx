@@ -27,6 +27,12 @@ import NehImage from "../../assets/leads/Neh.png";
 import KahaanImage from "../../assets/leads/Kahaan.png";
 import AhmedImage from "../../assets/leads/Ahmed.png";
 
+// Web Team
+import AshwiniImage from "../../assets/web/Ashwini.png";
+import SohanImage from "../../assets/web/Sohan.png";
+import HarshImage from "../../assets/web/Harsh.png";
+import MeetImage from "../../assets/web/Meet.png";
+
 type Props = {};
 type LeadMemberProps = {
   name: string;
@@ -325,6 +331,53 @@ const Team = (props: Props) => {
               />
             </div>
           </section>
+        </section>
+
+        {/* The Web Team */}
+        <section>
+          <div className="my-5 gap-5 px-10 lg:px-0 flex items-center">
+            <div className="bg-secondary h-[2px] w-[3%] text-secondary" />
+            <h1 className=" max-w-[150px] text-xl w-full font-semibold">
+              The Web Team
+            </h1>
+
+            <div className="bg-secondary h-[2px] w-full text-secondary" />
+          </div>
+
+          {/* Web Master */}
+          <div className="flex items-center justify-center">
+            <ProfileComponent
+              name="Ashwini Ramanuj"
+              designation="Web Master"
+              linkedInUrl="https://www.linkedin.com/in/ashwini-ramanuj/"
+              image={AshwiniImage}
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="flex flex-col mt-10  md:flex-row items-center justify-center gap-10"
+          >
+            <ProfileComponent
+              image={""}
+              name="Devraj Jhala"
+              designation="Web Core"
+              linkedInUrl="https://www.linkedin.com/in/devrajsinh-jhala/"
+            />
+            <ProfileComponent
+              image={MeetImage}
+              name="Meet Mehta"
+              designation="Web Core"
+              linkedInUrl="https://www.linkedin.com/in/mehtameet01/"
+            />
+            <ProfileComponent
+              image={SohanImage}
+              name="Sohan Sakhiya"
+              designation="Web Core"
+              linkedInUrl="https://www.linkedin.com/in/sohansakhiya/"
+            />
+          </motion.div>
         </section>
       </section>
     </>

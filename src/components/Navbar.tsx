@@ -73,11 +73,13 @@ const Navbar = () => {
           </Link>
           <ul className="flex items-center gap-10">
             {Links.map((link, index) => (
-              <CustomLink
-                key={index}
-                href={`/${link.link}`}
-                title={link.name}
-              />
+              <li key={index}>
+                <CustomLink
+                  key={index}
+                  href={`/${link.link}`}
+                  title={link.name}
+                />
+              </li>
             ))}
           </ul>
         </div>
