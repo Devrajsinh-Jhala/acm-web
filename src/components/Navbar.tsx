@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 type Props = {
   href: string;
@@ -56,6 +57,7 @@ const Navbar = () => {
     { name: "Blogs", link: "blogs" },
     { name: "Contact Us", link: "contact" },
   ];
+  const { data: session } = useSession();
   return (
     <>
       {/* Desktop Navigation */}
@@ -84,7 +86,24 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center gap-6">
-          <CgProfile className="object-contain h-8 w-8 cursor-pointer" />
+          {session ? (
+            <div onClick={() => signOut()}>
+              <img
+                className="object-contain h-8 w-8 cursor-pointer rounded-full"
+                src={
+                  session.user?.image
+                    ? session.user.image!
+                    : "https://imgs.search.brave.com/KVvFWxF_8Wljxb9vKQH9iOoksH3_hszAxS8luJCKN0E/rs:fit:542:225:1/g:ce/aHR0cHM6Ly90c2Uz/LmV4cGxpY2l0LmJp/bmcubmV0L3RoP2lk/PU9JUC4zSXNYTXNr/WnloZUVXcXRFM0Ry/N0p3SGFHZSZwaWQ9/QXBp"
+                }
+                alt={session.user?.name!}
+              />
+            </div>
+          ) : (
+            <CgProfile
+              onClick={() => signIn()}
+              className="object-contain h-8 w-8 cursor-pointer"
+            />
+          )}
 
           <ToggleMode />
         </div>
@@ -131,12 +150,24 @@ const Navbar = () => {
                 </ul>
               </div>
               <div className="flex items-center my-4 gap-6">
-                <CgProfile
-                  onClick={() => {
-                    setIsNavbarOpen(!isNavbarOpen);
-                  }}
-                  className="object-contain h-8 w-8 cursor-pointer"
-                />
+                {session ? (
+                  <div onClick={() => signOut()}>
+                    <img
+                      className="object-contain h-8 w-8 cursor-pointer rounded-full"
+                      src={
+                        session.user?.image
+                          ? session.user.image!
+                          : "https://imgs.search.brave.com/KVvFWxF_8Wljxb9vKQH9iOoksH3_hszAxS8luJCKN0E/rs:fit:542:225:1/g:ce/aHR0cHM6Ly90c2Uz/LmV4cGxpY2l0LmJp/bmcubmV0L3RoP2lk/PU9JUC4zSXNYTXNr/WnloZUVXcXRFM0Ry/N0p3SGFHZSZwaWQ9/QXBp"
+                      }
+                      alt={session.user?.name!}
+                    />
+                  </div>
+                ) : (
+                  <CgProfile
+                    onClick={() => signIn()}
+                    className="object-contain h-8 w-8 cursor-pointer"
+                  />
+                )}
 
                 <ToggleMode />
               </div>

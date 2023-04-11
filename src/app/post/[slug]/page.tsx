@@ -13,7 +13,8 @@ type Props = {
 };
 
 // revalidate after one day
-export const revalidate = 180;
+export const revalidate = 86400;
+// export const dynamic = "force-static";
 export async function generateStaticParams() {
   const query = groq`*[_type == 'post']{
     slug
@@ -55,7 +56,6 @@ _updatedAt
     }
   `;
   const post: Post = await sanityClient.fetch(query, { slug });
-  console.log(post.comments);
 
   return (
     <>
