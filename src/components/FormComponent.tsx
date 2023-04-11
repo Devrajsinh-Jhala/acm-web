@@ -48,7 +48,9 @@ const FormComponent = ({ post }: Props) => {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col p-5 max-w-2xl mx-auto mb-10"
         >
-          <h3 className="text-sm  text-yellow-500">Enjoyed the article?</h3>
+          <h3 className="text-sm  text-secondary font-semibold">
+            Enjoyed the article?
+          </h3>
           <h4 className="text-3xl mb-10 font-bold">Leave a comment below!</h4>
           <input
             {...register("_id")}
@@ -99,7 +101,7 @@ const FormComponent = ({ post }: Props) => {
           </div>
           <input
             type="submit"
-            className="shadow bg-yellow-500 hover:bg-yellow-400 focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
+            className="shadow bg-secondary hover:scale-95 transition-all duration-300 hover:bg-secondary/90 focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
           />
         </form>
       )}

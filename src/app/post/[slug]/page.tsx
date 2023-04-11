@@ -123,12 +123,12 @@ _updatedAt
         </article>
 
         <hr className="border-secondary border" />
-        {/* <div className="my-5">
+        <div className="my-5">
           <FormComponent post={post} />
-        </div> */}
+        </div>
 
         {/* Comments */}
-        {/* <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2">
+        <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2">
           <h3 className="text-4xl">Comments:</h3>
           <hr className="pb-2" />
           {post.comments &&
@@ -143,7 +143,7 @@ _updatedAt
               Be the first one to comment!
             </p>
           )}
-        </div> */}
+        </div>
       </article>
     </>
   );

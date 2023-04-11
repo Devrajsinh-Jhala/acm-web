@@ -29,7 +29,6 @@ import AhmedImage from "../../assets/leads/Ahmed.png";
 // Web Team
 import AshwiniImage from "../../assets/web/Ashwini.png";
 import SohanImage from "../../assets/web/Sohan.png";
-import HarshImage from "../../assets/web/Harsh.png";
 import MeetImage from "../../assets/web/Meet.png";
 
 type Props = {};
@@ -336,7 +335,7 @@ const Team = (props: Props) => {
         <section>
           <div className="my-5 gap-5 px-10 lg:px-0 flex items-center">
             <div className="bg-secondary h-[2px] w-[3%] text-secondary" />
-            <h1 className=" max-w-[150px] text-xl w-full font-semibold">
+            <h1 className=" max-w-[150px] text-sm sm:text-xl w-full font-semibold">
               The Web Team
             </h1>
 
