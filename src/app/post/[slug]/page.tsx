@@ -54,6 +54,7 @@ _updatedAt
     }
   `;
   const post: Post = await sanityClient.fetch(query, { slug });
+  console.log(post.comments);
 
   return (
     <>
@@ -138,7 +139,7 @@ _updatedAt
                 {comment.comment}
               </p>
             ))}
-          {console.log(post.comments)}
+
           {post.comments.length == 0 && (
             <p className="text-lg text-[#f7ab07] font-bold">
               Be the first one to comment!
