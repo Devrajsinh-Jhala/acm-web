@@ -138,6 +138,7 @@ _updatedAt
                 {comment.comment}
               </p>
             ))}
+          {console.log(post.comments)}
           {post.comments.length == 0 && (
             <p className="text-lg text-[#f7ab07] font-bold">
               Be the first one to comment!
