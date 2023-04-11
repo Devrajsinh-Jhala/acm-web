@@ -104,7 +104,7 @@ const FormComponent = ({ post }: Props) => {
           {session ? (
             <input
               type="submit"
-              className="shadow bg-yellow-500 hover:bg-yellow-400 focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
+              className="shadow bg-secondary hover:scale-90 transition-all duration-300 hover:bg-secondary/90 focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
             />
           ) : (
             <div className="flex flex-col p-10 my-10 bg-yellow-500 text-white max-w-2xl mx-auto">
