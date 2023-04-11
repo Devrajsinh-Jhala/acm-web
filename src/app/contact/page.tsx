@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import { contactFormSchema } from "../../schemas";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { Toaster, toast } from "react-hot-toast";
 
 type Props = {};
 
@@ -15,6 +16,16 @@ const initialValues = {
   message: "",
 };
 const ContactUs = (props: Props) => {
+  const successMessage = (
+    <p className="text-center text-sm md:text-base">
+      Message sent successfully! Thank you for your time!
+    </p>
+  );
+  const errorMessage = (
+    <p className="text-center text-sm md:text-base">
+      Oops! Something went wrong!
+    </p>
+  );
   // ** EmailJS integration
   const formRef = useRef<any>();
 
@@ -34,11 +45,10 @@ const ContactUs = (props: Props) => {
           )
           .then(
             (result) => {
-              console.log(result.text);
-              console.log("Message Sent");
+              toast.success(successMessage);
             },
             (error) => {
-              console.log(error.text);
+              toast.error(errorMessage);
             }
           );
       },
@@ -46,6 +56,9 @@ const ContactUs = (props: Props) => {
 
   return (
     <div className="my-10 px-10 lg:px-0">
+      <div>
+        <Toaster />
+      </div>
       <section className="flex md:flex-row flex-col items-start md:items-center justify-between gap-24">
         <motion.form
           initial={{ x: -700 }}
