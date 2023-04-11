@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import contact from "../../assets/undraw_contact_us_re_4qqt.svg";
 import { useFormik } from "formik";
 import { contactFormSchema } from "../../schemas";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 type Props = {};
 
@@ -14,16 +15,35 @@ const initialValues = {
   message: "",
 };
 const ContactUs = (props: Props) => {
+  // ** EmailJS integration
+  const formRef = useRef<any>();
+
   // ** Form Validation
   const { values, handleBlur, touched, handleChange, errors, handleSubmit } =
     useFormik({
       initialValues,
       validationSchema: contactFormSchema,
       onSubmit: (values, action) => {
-        console.log(values);
         action.resetForm();
+        emailjs
+          .sendForm(
+            "service_wh0njvu",
+            "template_dikc2ve",
+            formRef.current,
+            "Jda2EjyCK1FWHBuJM"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              console.log("Message Sent");
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
       },
     });
+
   return (
     <div className="my-10 px-10 lg:px-0">
       <section className="flex md:flex-row flex-col items-start md:items-center justify-between gap-24">
@@ -32,6 +52,7 @@ const ContactUs = (props: Props) => {
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
           onSubmit={handleSubmit}
+          ref={formRef}
           className="flex w-full lg:w-[40%] flex-col gap-y-5"
         >
           <div className="flex flex-col gap-1 items-start justify-start">

@@ -13,6 +13,7 @@ type Props = {
 };
 
 // revalidate after one day
+export const revalidate = 180;
 export async function generateStaticParams() {
   const query = groq`*[_type == 'post']{
     slug
