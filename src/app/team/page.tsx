@@ -30,6 +30,7 @@ import AhmedImage from "../../assets/leads/Ahmed.png";
 import AshwiniImage from "../../assets/web/Ashwini.png";
 import SohanImage from "../../assets/web/Sohan.png";
 import MeetImage from "../../assets/web/Meet.png";
+import DevrajImage from "../../assets/web/Devraj.png";
 
 type Props = {};
 type LeadMemberProps = {
@@ -358,7 +359,7 @@ const Team = (props: Props) => {
             className="flex flex-col w-full mt-10  md:flex-row items-center justify-center gap-10"
           >
             <ProfileComponent
-              image={""}
+              image={DevrajImage}
               name="Devraj Jhala"
               designation="Web Core"
               linkedInUrl="https://www.linkedin.com/in/devrajsinh-jhala/"
