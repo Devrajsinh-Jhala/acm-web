@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: true,
+  distDir: "build",
   experimental: {
     appDir: true,
   },
