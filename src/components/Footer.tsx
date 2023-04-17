@@ -8,14 +8,14 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="flex lg:flex-row flex-col  px-10 lg:px-0 items-center my-10 space-y-5 justify-between">
+    <footer className="flex lg:flex-row flex-col relative px-10 lg:px-0 items-center space-y-5 justify-between my-10">
       <div>
         <p className=" capitalize font-bold">EMAIL</p>
         <a className="text-lg font-bold" href="mailto:acm.for.pdeu@gmail.com">
           acm.for.pdeu@gmail.com
         </a>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col lg:absolute mt-0 lg:left-[40%] items-center">
         <Link href={"/"}>
           <Image
             src={ACM.src}

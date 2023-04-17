@@ -11,7 +11,7 @@ type Props = {
 
 const DepartmentCards = ({ title, description, image }: Props) => {
   return (
-    <section className="flex max-w-[450px] w-full hover:scale-90 gap-10 transition-all duration-300 rounded-xl items-center justify-between px-5 py-3 text-light bg-yellow-700">
+    <section className="flex max-w-[450px] h-[150px] w-full hover:scale-90 gap-10 transition-all duration-300 rounded-xl items-center justify-between px-5 py-3 text-light bg-yellow-700">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -20,22 +20,16 @@ const DepartmentCards = ({ title, description, image }: Props) => {
         }}
         className=""
       >
-        <p className="sm:text-xl text-lg mb-3 font-bold">{title}</p>
+        <p className=" text-lg mb-3 font-bold">{title}</p>
         <p className="sm:text-sm text-xs">{description}</p>
       </motion.div>
-      <motion.div
-        initial={{ rotate: 0 }}
-        whileInView={{
-          rotate: 360,
-          transition: { duration: 1 },
-        }}
-      >
+      <motion.div>
         <Image
           src={image}
           alt="Web Development"
           className=" object-contain"
-          width={350}
-          height={350}
+          width={250}
+          height={250}
           priority
         />
       </motion.div>
