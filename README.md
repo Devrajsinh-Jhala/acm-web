@@ -74,22 +74,22 @@ Also do not forget to make an .env.local file and put all the environments menti
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`NEXT_PUBLIC_SANITY_PROJECT_ID`=1pnsxvns
+`NEXT_PUBLIC_SANITY_PROJECT_ID`=
 
-`NEXT_PUBLIC_SANITY_DATASET`=production
+`NEXT_PUBLIC_SANITY_DATASET`=
 
-`NEXT_PUBLIC_SANITY_API_VERSION`=2022-11-15
+`NEXT_PUBLIC_SANITY_API_VERSION`=
 
-`SANITY_API_TOKEN`=sk9gDN8kA88gmv2y3IaMHEm9i6OhZM2kR8CgsxqXkUkewHUzQJn3tgyqCoHHicoPmJJCRwPVEaMB8jmQLoBezA9KEdnUC5Vjkm3WoXbqo1xLrWAKe7LR0XcoyvinGel0tPHtLKNfPoYZigoclnLRbUwaaHGTDHYcthem9Qph0t2GDg5tKBW4
+`SANITY_API_TOKEN`=
 
-`GOOGLE_CLIENT_ID`=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
+`GOOGLE_CLIENT_ID`=
 
-`GOOGLE_CLIENT_SECRET`=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
+`GOOGLE_CLIENT_SECRET`=
 <!-- For developement use localhost but for deployment use production/deployed url -->
 
-`NEXTAUTH_URL`=http://localhost:3000/
+`NEXTAUTH_URL`=
 
-`NEXTAUTH_SECRET`=devraj
+`NEXTAUTH_SECRET`=
 
 <hr>
 
